@@ -45,11 +45,6 @@ public class Magic {
 		return arr;
 	}
 	
-	private boolean isMagic(int[][] arr) {
-		
-		
-		
-		
-		
+	private boolean isMagic(int[][] arr) {		
 	}
 }
