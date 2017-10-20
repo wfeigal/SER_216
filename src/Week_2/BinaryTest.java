@@ -3,10 +3,17 @@ package Week_2;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import javax.swing.JButton;
+import java.awt.BorderLayout;
+import javax.swing.JPanel;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.SwingConstants;
+import javax.swing.JTextField;
 
 public class BinaryTest {
 
-	private JFrame frame;
+	private JFrame panel;
 
 	/**
 	 * Launch the application.
@@ -16,7 +23,7 @@ public class BinaryTest {
 			public void run() {
 				try {
 					BinaryTest window = new BinaryTest();
-					window.frame.setVisible(true);
+					window.panel.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -35,9 +42,16 @@ public class BinaryTest {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		panel = new JFrame();
+		panel.setBounds(100, 100, 450, 300);
+		
+		JLabel lblBinaryToDecimal = new JLabel("Binary to Decimal Converter");
+		lblBinaryToDecimal.setBounds(0, 0, 50, 200);
+		lblBinaryToDecimal.setHorizontalAlignment(SwingConstants.CENTER);
+		lblBinaryToDecimal.setFont(new Font("Tahoma", Font.BOLD, 22));
+		panel.getContentPane().add(lblBinaryToDecimal);
+		
+		
 	}
 
 }
