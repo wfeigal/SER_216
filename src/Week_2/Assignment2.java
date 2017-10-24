@@ -18,9 +18,16 @@ import java.awt.event.ActionEvent;
 import java.awt.Toolkit;
 import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
-import java.awt.Dialog.ModalExclusionType;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+/**
+ * Binary to decimal converter GUI application created for 
+ * SER216 Assignment 2 Week 2
+ * 
+ * 
+ * 
+ * @author Bill Feigal
+ * @version 1.0
+ * 
+ */
 
 public class Assignment2 extends JFrame {
 
@@ -29,7 +36,7 @@ public class Assignment2 extends JFrame {
 	private JTextField decimalTxtBx;
 
 	/**
-	 * Launch the application.
+	 * Set Look and Feel, and launch the application.
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -41,7 +48,7 @@ public class Assignment2 extends JFrame {
 						SwingUtilities.updateComponentTreeUI(frame);
 					}
 					catch (Exception e) {
-						//do Nothing
+						//do Nothing use existing GUI properties
 					}
 					frame.setVisible(true);
 				} catch (Exception e) {
@@ -52,9 +59,10 @@ public class Assignment2 extends JFrame {
 	}
 
 	/**
-	 * Create the frame.
+	 *  Create the GUI.
 	 */
 	public Assignment2() {
+		setResizable(false);
 		setTitle("Binary to Decimal Converter");
 		//SETUP FRAME AND PANE
 		try {
@@ -80,6 +88,7 @@ public class Assignment2 extends JFrame {
 		
 		//ENTRY AND RESULT TEXT BOXES
 		binaryTxtBx = new JTextField();
+		binaryTxtBx.setToolTipText("ex: \"10110\"");
 		binaryTxtBx.setFont(new Font("Tahoma", Font.BOLD, 11));
 		binaryTxtBx.setText("Enter Binary Value.....");
 		binaryTxtBx.setBounds(217, 54, 149, 30);
@@ -132,13 +141,23 @@ public class Assignment2 extends JFrame {
 			}
 		});
 	}
+	
+	/**
+	 * Returns a decimal integer that is equal to the binary value of a string passed
+	 * in as a parameter.
+	 * 
+	 * @param binaryString String representation of the binary value to be converted
+	 * @return result Integer decimal value equal to the binary string passed to the method
+	 * @throws NumberFormatException
+	 */
 	private static int parseBinary(String binaryString) throws NumberFormatException {
 		//VARIABLES AND DECLARATIONS
 		int test = 0, val = 0, result = 0;
 		//GET RID OF WHITESPACE WITHIN INPUT STRING
 		binaryString = binaryString.trim().replaceAll("\\s", "");
 		
-		//ITERATE THROUGH THE INPUT STRING AND IF ANY VALUE IS GREATER THAN 1, THROW EXCEPTION
+		//ITERATE THROUGH THE INPUT STRING AND IF ANY VALUE IS GREATER THAN 1, 
+		//OR LESS THAN 0, THROW EXCEPTION
 		for (int i = 0; i < binaryString.length(); i++) {
 			test = Character.getNumericValue(binaryString.charAt(i));
 			if (test > 1 || test < 0)
