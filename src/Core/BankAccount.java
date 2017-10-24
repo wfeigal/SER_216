@@ -87,14 +87,20 @@ public class BankAccount {
 	public void setAccountType(int accountType) {
 		this.accountType = accountType;
 	}
-	
+	/**
+	 * 
+	 * @return the new balance of the account after interest has been applied
+	 */
 	public double calculateTotalBalance() {
 		double rate = this.getInterestRate();
 		if (rate == 0 )
 			return 0;
 		return this.balance + (balance * rate/100);
 	}
-	
+	/**
+	 * 
+	 * @return the interest rate of the account depending on its type
+	 */
 	public double getInterestRate() {
 		double intRate = 0;
 		
