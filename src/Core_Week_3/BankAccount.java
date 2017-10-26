@@ -1,4 +1,4 @@
-package Core;
+package Core_Week_3;
 
 public class BankAccount {
 
@@ -10,7 +10,7 @@ public class BankAccount {
 	/**
 	 * Default constructor
 	 */
-	BankAccount(){
+	public BankAccount(){
 		this.balance = 0;
 		this.accountType = 0;
 		this.accountNumber = "none";
@@ -25,7 +25,7 @@ public class BankAccount {
 	 * @param num Account number
 	 * @param name Name of account holder
 	 */
-	BankAccount(double bal, int type, String num, String name){
+	public BankAccount(double bal, int type, String num, String name){
 		this.balance = bal;
 		this.accountType = type;
 		this.accountNumber = num;
@@ -109,7 +109,7 @@ public class BankAccount {
 				break;
 			case 2: intRate = 4.5;
 				break;
-			case 3: intRate = 1.0;
+			case 3: intRate = 1;
 				break;
 			case 4: intRate = 15;
 				break;
