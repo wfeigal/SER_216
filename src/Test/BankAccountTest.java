@@ -28,7 +28,7 @@ public class BankAccountTest {
 		assertEquals(50.25,result,.01);
 	}
 	@Test
-	public void testIntRate() {
+	public void testIntRate() { 
 		double result = testAcc.getInterestRate();
 		assertEquals(.5,result,0);
 	}
