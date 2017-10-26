@@ -8,7 +8,7 @@ import org.junit.Test;
 
 import Core_Week_3.BankAccount;
 
-public class BankAccountTest { 
+public class BankAccountTest {  
 	BankAccount testAcc = new BankAccount();
 	
 	@Before

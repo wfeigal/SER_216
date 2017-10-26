@@ -15,7 +15,7 @@ import Core_Week_3.Customer;
  * @author Bill Feigal
  *
  */
-public class CustomerTest { 
+public class CustomerTest {  
 
 	Customer testCust = new Customer(null, null);
 	/**

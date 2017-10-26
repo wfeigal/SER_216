@@ -91,7 +91,7 @@ public class BankAccount {
 	 * 
 	 * @return the new balance of the account after interest has been applied
 	 */
-	public double calculateTotalBalance() { 
+	public double calculateTotalBalance() {  
 		double rate = this.getInterestRate();
 		if (rate == 0 )
 			return 0;
