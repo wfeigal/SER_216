@@ -12,7 +12,7 @@ import org.junit.Test;
 import Core_Week_3.Customer;
 
 /**
- * @author Bill Feigal
+ * @author Bill Feigal 
  *
  */
 public class CustomerTest {   

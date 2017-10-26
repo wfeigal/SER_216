@@ -92,7 +92,7 @@ public class Customer {
 	/**
 	 * @return the age
 	 */
-	public int getAge() {   
+	public int getAge() {    
 		return age;
 	}
 
