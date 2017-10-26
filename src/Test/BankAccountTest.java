@@ -18,7 +18,7 @@ public class BankAccountTest {
 	}
 
 	@After
-	public void tearDown() throws Exception {
+	public void tearDown() throws Exception { 
 		testAcc = null;
 	}
 
