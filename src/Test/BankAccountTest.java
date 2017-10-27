@@ -31,6 +31,18 @@ public class BankAccountTest {
 	public void testIntRate() { 
 		double result = testAcc.getInterestRate();
 		assertEquals(.5,result,0);
+		
+		testAcc.setAccountType(2);
+		result = testAcc.getInterestRate();
+		assertEquals(4.5,result,0);
+		
+		testAcc.setAccountType(3);
+		result = testAcc.getInterestRate();
+		assertEquals(1,result,0);
+		
+		testAcc.setAccountType(4);
+		result = testAcc.getInterestRate();
+		assertEquals(15,result,0);
 	}
 
 }
