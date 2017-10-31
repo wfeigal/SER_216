@@ -6,7 +6,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import Core_Week_3.BankAccount;
+import core.BankAccount;
  
 public class BankAccountTest {  
 	BankAccount testAcc = new BankAccount();
@@ -21,12 +21,17 @@ public class BankAccountTest {
 	public void tearDown() throws Exception {  
 		testAcc = null;
 	}
-
+	/**
+	 * Tests the calculation of a new balance
+	 */
 	@Test
 	public void testCalcBal() {
 		double result = testAcc.calculateTotalBalance();
 		assertEquals(50.25,result,.01);
 	}
+	/** 
+	 * Tests whether the interest rates returned are correct for each account type
+	 */
 	@Test
 	public void testIntRate() { 
 		double result = testAcc.getInterestRate();

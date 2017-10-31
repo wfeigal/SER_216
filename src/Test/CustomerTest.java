@@ -9,7 +9,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import Core_Week_3.Customer;
+import core.Customer;
 
 /**
  * @author Bill Feigal 
@@ -36,18 +36,23 @@ public class CustomerTest {
 	public void tearDown() throws Exception {
 		testCust = null;
 	}
-
+	/**
+	 * Tests the printing of the address to the console
+	 */
 	@Test
 	public void testAddress() {
 		String result = testCust.displayAddress();
 		System.out.println(result);
-		assertEquals("4795 Anyroad\nEagan, MN 55122", result);
+		assertEquals("Check that address prints correctly","4795 Anyroad\nEagan, MN 55122", result);
 	}
+	/**
+	 * Tests the printing of the address label to the console
+	 */
 	@Test
 	public void testAddressLabel() {
 		String result = testCust.displayAddressLabel();
 		System.out.println(result);
-		assertEquals("Timothy\n4795 Anyroad\nEagan, MN 55122", result);
+		assertEquals("Check that address label prints correctly","Timothy\n4795 Anyroad\nEagan, MN 55122", result);
 	}
 
 }

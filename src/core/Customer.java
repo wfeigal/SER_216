@@ -1,4 +1,4 @@
-package Core_Week_3;
+package core;
 
 public class Customer {
 	private String name = "";

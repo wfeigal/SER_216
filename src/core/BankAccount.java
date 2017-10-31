@@ -1,4 +1,4 @@
-package Core_Week_3;
+package core;
 
 public class BankAccount {
 
@@ -27,7 +27,11 @@ public class BankAccount {
 	 */
 	public BankAccount(double bal, int type, String num, String name){
 		this.balance = bal;
-		this.accountType = type;
+		if (type <= 4 && type >= 0) {
+			this.accountType = type;
+		}
+		else
+			this.accountType = 0;
 		this.accountNumber = num;
 		this.accountHolder = name;
 	}
@@ -40,7 +44,7 @@ public class BankAccount {
 	}
 	/**
 	 * 
-	 * @param accountNumber
+	 * @param accountNumber String value representing account number
 	 */
 	public void setAccountNumber(String accountNumber) {
 		this.accountNumber = accountNumber;
@@ -54,7 +58,7 @@ public class BankAccount {
 	}
 	/**
 	 * 
-	 * @param accountHolder
+	 * @param accountHolder Name of the account holder String value
 	 */
 	public void setAccountHolder(String accountHolder) {
 		this.accountHolder = accountHolder;
@@ -68,7 +72,7 @@ public class BankAccount {
 	}
 	/**
 	 * 
-	 * @param balance
+	 * @param balance Current balance of the account
 	 */
 	public void setBalance(double balance) {
 		this.balance = balance;
@@ -82,12 +86,17 @@ public class BankAccount {
 	}
 	/**
 	 * 
-	 * @param accountType
+	 * @param accountType Type of account 
 	 */
 	public void setAccountType(int accountType) {
-		this.accountType = accountType;
+		if (accountType <= 4 && accountType >= 0) {
+			this.accountType = accountType;
+		}
+		else
+			this.accountType = 0;
 	}
 	/**
+	 * Calculates the current balance of the account after applying interest
 	 * 
 	 * @return the new balance of the account after interest has been applied
 	 */
@@ -98,6 +107,7 @@ public class BankAccount {
 		return this.balance + (balance * rate/100);
 	}
 	/**
+	 * Returns the value representing the percent interest rate for the given account type
 	 * 
 	 * @return the interest rate of the account depending on its type
 	 */

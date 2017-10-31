@@ -150,7 +150,7 @@ public class Assignment2 extends JFrame {
 	 * @return result Integer decimal value equal to the binary string passed to the method
 	 * @throws NumberFormatException
 	 */
-	private static int parseBinary(String binaryString) throws NumberFormatException {
+	public static int parseBinary(String binaryString) throws NumberFormatException {
 		//VARIABLES AND DECLARATIONS
 		int test = 0, val = 0, result = 0;
 		//GET RID OF WHITESPACE WITHIN INPUT STRING
